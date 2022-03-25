@@ -1,0 +1,59 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 43px 45px;
+    border-bottom: #EAEAEA solid 1px;
+
+    &__logo{
+        display: flex;
+    }
+
+    &__title{
+        margin-left: 16px;
+        text-align: left;
+    }
+
+    &__logoIcon{
+        width: 40px;
+        height: 40px;
+    }
+
+    &__name{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #000000;
+    }
+
+    &__descr{
+        font-size: 14px;
+        color: #9D9D9D;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+    }
+
+    &__basket{
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+    }
+
+    &__num{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        color: #5C5C5C;
+        margin-left: 10px;
+    }
+
+    &__heart{
+        margin-right: 30px;
+    }
+    
+}
