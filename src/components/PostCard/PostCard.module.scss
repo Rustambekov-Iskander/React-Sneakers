@@ -1,0 +1,64 @@
+.card{
+    border: 1px solid #F3F3F3;
+    width: 160px;
+    height: 260px;
+    border-radius: 40px;
+    padding: 20px 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 20px;
+    
+
+    &__imgs{
+        display: flex;
+        align-items: flex-start;
+        padding: 0px;
+    }
+
+    &__heart{
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        cursor: pointer;
+    }
+
+    &__img{
+        width: 133px;
+        height: 112px;
+    }
+
+    &__title{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    &__div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__price{
+
+        .price__cost{
+            color: #BDBDBD;
+            font-size: 11px;
+            font-weight: 500;
+            line-height: 13px;
+        }
+
+        .price__value{
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 17px;
+            color: #000000;
+        }
+    }
+
+    &__plus{
+        cursor: pointer;
+    }
+}

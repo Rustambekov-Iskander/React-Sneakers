@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Header from './components/header/Header';
-import PostList from './components/post-list/PostList';
+import AppRouter from './components/AppRouter';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         </header>
 
         <div className='content'>
-          <PostList/>
+          <AppRouter/>
         </div>
 
         <footer className='footer'>

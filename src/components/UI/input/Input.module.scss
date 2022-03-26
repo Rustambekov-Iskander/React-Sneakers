@@ -1,0 +1,18 @@
+.input{
+    padding: 13px 18px;
+    border-radius: 10px;
+    border: 1px solid #F3F3F3;
+    position: relative;
+
+    &::placeholder{
+        color: #C4C4C4;
+    }
+    
+    &.search{
+        padding: 13px 30px;
+        background: url('../../img/icons/search.svg') no-repeat;
+        background-size: 14.5px 14.5px;
+        background-position: 3% center;
+       
+    }
+}

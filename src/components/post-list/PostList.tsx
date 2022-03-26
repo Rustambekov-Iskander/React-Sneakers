@@ -1,20 +1,22 @@
-import React, { FC, useEffect } from 'react';
-import { useTypeSelector } from '../../hooks/useTypeSelector';
-import {useActions} from '../../hooks/useActions';
+import React, { FC } from 'react';
 import { Post } from '../../types/post';
+import PostCard from '../PostCard/PostCard';
+import cl from './PostList.module.scss';
 
-const PostList = () => {
-    const {posts, loading, error} = useTypeSelector(state => state.post);
-    const {fetchPosts} = useActions();
+interface ListProps {
+    posts: any[];
+}
 
-    useEffect(() => {
-        fetchPosts();
-    }, [])
-
+const PostList:FC<ListProps> = ({posts}) => {
     return (
-        <div>
-            {posts.map((post: Post) => 
-            <div key={post.id}>{post.id}. {post.title} Цена: {post.userId}0346 руб.</div>)}
+        <div className={cl.postList}>
+        {posts.length
+            ?posts.map((post: Post) => 
+                <PostCard key={post.id} title={post.title} price={post.userId}/>)
+
+            :<h1 className={cl.h1}>Посты не найдены...</h1>
+        }
+
         </div>
     );
 };
