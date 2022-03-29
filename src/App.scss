@@ -1,7 +1,12 @@
 html, body{
+  background-color: #ffff;
   margin: 0px;
   padding: 0px;
   width: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 .App {
@@ -14,11 +19,16 @@ html, body{
 }
 
 .header{
+  background-color: #ffff;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
   margin-bottom: 45px;
 }
 
 .content{
   padding: 0px 5px;
+  padding-top: 150px;
 }
 
   

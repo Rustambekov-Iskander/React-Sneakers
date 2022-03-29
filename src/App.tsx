@@ -13,7 +13,9 @@ function App() {
         </header>
 
         <div className='content'>
+        <React.StrictMode>
           <AppRouter/>
+        </React.StrictMode>
         </div>
 
         <footer className='footer'>

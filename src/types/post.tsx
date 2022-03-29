@@ -6,6 +6,10 @@ export interface Post{
     img?: string;
 }
 
+export interface PostP{
+    post: Post;
+}
+
 export interface PostState{
     posts: any[];
     loading: boolean;

@@ -12,3 +12,18 @@
         transition: 0.3s;
     }
 }
+
+.backButton {
+    border: 1px solid #F2F2F2;
+    background-color: #ffff;
+    padding: 12px 14px;
+    border-radius: 8px;
+    color: #C8C8C8;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: rgb(243, 240, 240);
+        transition: 0.2s;
+    }
+}
