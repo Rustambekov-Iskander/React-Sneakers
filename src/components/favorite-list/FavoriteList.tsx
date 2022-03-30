@@ -26,13 +26,19 @@ const FavoriteList: FC<ListProps> = ({
     }
 
     const addInBasket = (post: Post) => {
-        setBasket([...basket, {post}]);
+        let forBasket = false;
 
         basket.map((Basket: Basket) => {
             if(Basket.post.id === post.id){
                 setBasket(basket.filter(Basket => Basket.post !== post))
+                forBasket = true
             }
         })
+
+        if (!forBasket){
+            setBasket([...basket, {post}]);
+        }
+
     }
 
     return (
@@ -44,7 +50,6 @@ const FavoriteList: FC<ListProps> = ({
                             key={post.post.id + 100} 
                             post={post.post} 
                             favorites={favorites} 
-                            heart={true}
                             heartOnClick={() => removeFavorite(post.post)}
                             basket={basket}
                             plusClick={() => addInBasket(post.post)}

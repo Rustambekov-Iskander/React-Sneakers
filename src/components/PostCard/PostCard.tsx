@@ -48,9 +48,15 @@ const PostCard: FC<Card> = ({
     }
 
     return (
-        <div className={cl.card}>
+        <div className={ColorPlus ? [cl.card, cl.inBasket].join(' ') : cl.card}>
             <div className={cl.card__imgs}>
-                <img onClick={heartOnClick} className={cl.card__heart} src={heart ? colorHeart : transparentHeart} alt="" />
+                <img 
+                    onClick={heartOnClick} 
+                    className={heart ? [cl.card__heart, cl.heart__color].join(' ') : cl.card__heart} 
+                    src={heart ? colorHeart : transparentHeart} 
+                    alt="" 
+                />
+
                 <img className={cl.card__img} src={img ?img :defaultImg} alt="" />
             </div>
             <div className={cl.card__title}>Мужские Кроссовки {post.title}</div>
@@ -58,9 +64,14 @@ const PostCard: FC<Card> = ({
             <div className={cl.card__div}>
                 <div className={cl.card__price}>
                     <div className={cl.price__cost}>ЦЕНА:</div>
-                    <div className={cl.price__value}>{post.userId}909 руб.</div>
+                    <div className={cl.price__value}>{post.userId * 30} $</div>
                 </div>
-            <img onClick={plusClick} className={cl.card__plus} src={ColorPlus ? colorPlus : plus} alt="" />
+            <img 
+                onClick={plusClick} 
+                className={ColorPlus ? [cl.card__plus, cl.plus__color].join(' ') : cl.card__plus} 
+                src={ColorPlus ? colorPlus : plus} 
+                alt="" 
+            />
             </div>
         </div>
     );

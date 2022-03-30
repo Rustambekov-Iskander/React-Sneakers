@@ -1,0 +1,21 @@
+.menu{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 11;
+
+    &__blur{
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(2px);
+        position: absolute;
+    }
+
+    &__content{
+        width: 30vw;
+        height: 100vh;
+        position: relative;
+        right: 1px;
+        background-color: white;
+    }
+}

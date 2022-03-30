@@ -51,7 +51,7 @@ const Favorites = (props: any) => {
         return (
             <div className={cl.list}>
                 <div className={cl.title}>
-                    <ButtonBack/>
+                <NavLink to={'/'}><ButtonBack/></NavLink>
                     <h1>Мои закладки</h1>
                 </div>
                 <FavoriteList 

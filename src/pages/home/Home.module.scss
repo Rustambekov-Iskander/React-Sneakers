@@ -12,5 +12,18 @@
         text-align: left;
         color: #000000;
     }
+
+    @media (max-width: 537px) {
+        
+        &{
+            padding: 0px 10px;
+        }
+
+        &__title{
+            font-size: 23px;
+        }  
+
+    }
 }
+
 

@@ -7,13 +7,14 @@ import profile from '../img/icons/profile.svg';
 import { Link, NavLink } from 'react-router-dom';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { Basket } from '../../types/basket';
+import BasketMenu from '../basket-menu/BasketMenu';
 
 const Header = () => {
     const {basket, loadingB, errorB} = useTypeSelector(state => state.basket);
     let totalSum = 0;
 
     basket.forEach((Basket: Basket) => {
-        totalSum += Basket.post.userId + 909; 
+        totalSum += Basket.post.userId * 30; 
     })
 
     return (
@@ -28,13 +29,11 @@ const Header = () => {
                 </div>
             </div>
         </Link>
-
             <div className={cl.header__menu}>
                 <div className={cl.header__basket}>
                     <img src={basketIcon} alt='корзина' className={cl.header__basketIcon} />
-                    <div className={cl.header__num}>{totalSum} руб.</div>
+                    <div className={cl.header__num}>{totalSum}$</div>
             </div>
-
                 <Link to={'/favorites'}>
                     <img src={heart} alt='избранные' className={cl.header__heart}/>
                 </Link>

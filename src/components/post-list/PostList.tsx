@@ -22,23 +22,34 @@ const PostList:FC<ListProps> = ({
 }) => {
 
     const addFavorites = (post: Post) => {
-        setFavorites([...favorites, {post}]);
+        let forFav = false;
 
         favorites.map((favorite: Favorite) => {
             if(favorite.post.id === post.id){
                 setFavorites(favorites.filter(favoritE => favoritE.post !== post))
+                forFav = true;
             }
         })
+
+        if (!forFav){
+        setFavorites([...favorites, {post}]);
+        }
     }
 
     const addInBasket = (post: Post) => {
-        setBasket([...basket, {post}]);
+        let forBasket = false;
 
         basket.map((Basket: Basket) => {
             if(Basket.post.id === post.id){
                 setBasket(basket.filter(Basket => Basket.post !== post))
+                forBasket = true
             }
         })
+
+        if (!forBasket){
+            setBasket([...basket, {post}]);
+        }
+
     }
 
     return (
