@@ -31,8 +31,6 @@ const Favorites = (props: any) => {
     }, [basketP])
 
 
-
-
     if (loadingF){
         return (
             <Loading/>
@@ -54,7 +52,7 @@ const Favorites = (props: any) => {
                 <NavLink to={'/'}><ButtonBack/></NavLink>
                     <h1>Мои закладки</h1>
                 </div>
-                <FavoriteList 
+                <FavoriteList
                     posts={favorites} 
                     favorites={favoritesP} 
                     setFavorites={setFavorites}

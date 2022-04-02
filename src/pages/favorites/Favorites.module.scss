@@ -1,5 +1,6 @@
 .list {
     padding: 0px 60px;
+    min-height: 100vh;
 
     .title{
         display: flex;
@@ -7,6 +8,12 @@
 
         h1{
             margin-left: 21px;
+        }
+
+        @media (max-width: 537px) {
+            h1{
+                font-size: 24px;
+            }
         }
     }
 }

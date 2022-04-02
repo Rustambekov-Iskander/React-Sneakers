@@ -1,21 +1,52 @@
+
 .menu{
     width: 100vw;
     height: 100vh;
     position: fixed;
     z-index: 11;
+    display: flex;
 
     &__blur{
         width: 100vw;
         height: 100vh;
-        backdrop-filter: blur(2px);
-        position: absolute;
+        backdrop-filter: blur(5px);
     }
 
     &__content{
-        width: 30vw;
-        height: 100vh;
+        width: 50vw;
+        height: 100%;
         position: relative;
-        right: 1px;
         background-color: white;
+        padding: 32px 30px;
+    }
+
+    @media (max-width: 1150px) {
+        &__content{
+            width: 60vw;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        &__content{
+            width: 70vw;
+        }
+    }
+
+    @media (max-width: 700px) {
+        &__content{
+            width: 100vw;
+        }
+
+        &__blur{
+            width: 50vw;
+        }
+    }
+
+    &__title{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+        text-align: left;
     }
 }
+

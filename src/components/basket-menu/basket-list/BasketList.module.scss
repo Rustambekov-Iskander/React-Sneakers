@@ -1,0 +1,86 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+    
+    &__list{
+        height: 75vh;
+        overflow-y: scroll;
+        margin-bottom: 20px;
+    }
+
+    &__order{
+        display: flex;
+        flex-direction: column;
+
+        button{
+            margin: 24px 0px;
+        }
+    }
+
+    &__totalPrice{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        align-items: center;
+        
+        .totalPrice{
+    
+            &__border{
+                border-bottom: 1px dashed gray;
+                width: 70%;
+            }
+
+            &__price{
+                font-family: Inter;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+
+        }
+    }
+}
+
+.noOrders{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .box{
+        width: 120px;
+        height: 120px;
+        margin-bottom: 24px;
+    }
+
+    .succes{
+        width: 83px;
+        height: 120px;
+        margin-bottom: 24px;
+
+    }
+
+    .title{
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        text-align: center;
+        margin-bottom: 11px;
+    }
+
+    .descr{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        text-align: center;
+        color: gray;
+        margin-bottom: 70px;
+
+    }
+}

@@ -22,7 +22,18 @@ const FavoriteList: FC<ListProps> = ({
 }) => {
 
     const removeFavorite = (post: Post) => {
-        setFavorites(favorites.filter(favoritE => favoritE.post !== post))
+        let forFavorite = false;
+        favorites.map((favorite: Favorite) => {
+            if(favorite.post.id === post.id){
+                setFavorites(favorites.filter(favoritE => favoritE.post !== post))
+                forFavorite = true;
+            }
+        })
+
+        if(!forFavorite){
+            setFavorites([...favorites, {post}])
+        }
+        
     }
 
     const addInBasket = (post: Post) => {
