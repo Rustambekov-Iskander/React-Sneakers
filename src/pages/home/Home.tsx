@@ -10,7 +10,7 @@ import Favorites from '../favorites/Favorites';
 import cl from './Home.module.scss'
 
 
-const Home = (props: any) => {
+const Home = () => {
 
     // get posts 
     const {posts, loading, error} = useTypeSelector(state => state.post);
@@ -20,17 +20,13 @@ const Home = (props: any) => {
         fetchPosts();
     }, [])
 
-
-
     // search
     const [query, setQuery] = useState('');
     const searchedPosts = usePosts(posts, query);
 
 
-
-    // get favorite Posts
     // get favorite posts 
-    const {favorites, loadingF, errorF } = useTypeSelector(state => state.favorite);
+    const {favorites} = useTypeSelector(state => state.favorite);
     const [favoritesP, setFavorites] = useState(favorites);
     const {fetchFavorites} = useActions();
 
@@ -41,7 +37,7 @@ const Home = (props: any) => {
 
 
     // get posts on basket 
-    const {basket, loadingB, errorB} = useTypeSelector(state => state.basket);
+    const {basket} = useTypeSelector(state => state.basket);
     const [basketP, setBasket] = useState(basket);
     const {fetchBasket} = useActions();
 

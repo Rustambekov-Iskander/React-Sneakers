@@ -4,7 +4,7 @@ import transparentHeart from '../img/icons/transparent-heart.svg';
 import colorHeart from '../img/icons/color-heart.svg';
 import defaultImg from '../img/default-img.png';
 import plus from '../img/icons/plus.svg';
-import colorPlus from '../img/icons/check.svg';
+import check from '../img/icons/check.svg';
 import { Post } from '../../types/post';
 import { Favorite } from '../../types/favorite';
 import { Basket } from '../../types/basket';
@@ -17,7 +17,6 @@ interface Card{
     favorites?: any[];
     plusClick?: any;
     basket?: any[];
-    ColorPlus?: boolean;
 }
 
 const PostCard: FC<Card> = ({
@@ -27,10 +26,10 @@ const PostCard: FC<Card> = ({
     favorites,
     heart = false,
     basket,
-    plusClick,
-    ColorPlus = false,
+    plusClick
 }) => {
 
+    
     if(favorites){
         favorites.map((favorite: Favorite) => {
             if(favorite.post.id === post.id){
@@ -39,16 +38,17 @@ const PostCard: FC<Card> = ({
         })
     }
 
+    let cheked = false
     if(basket){
         basket.map((Basket: Basket) => {
             if(Basket.post.id === post.id){
-                ColorPlus = true;
+                cheked = true;
             }
         })
     }
 
     return (
-        <div className={ColorPlus ? [cl.card, cl.inBasket].join(' ') : cl.card}>
+        <div className={cheked ? [cl.card, cl.inBasket].join(' ') : cl.card}>
             <div className={cl.card__imgs}>
                 <img 
                     onClick={heartOnClick} 
@@ -68,8 +68,8 @@ const PostCard: FC<Card> = ({
                 </div>
             <img 
                 onClick={plusClick} 
-                className={ColorPlus ? [cl.card__plus, cl.plus__color].join(' ') : cl.card__plus} 
-                src={ColorPlus ? colorPlus : plus} 
+                className={cheked ? [cl.card__plus, cl.plus__color].join(' ') : cl.card__plus} 
+                src={cheked ? check : plus} 
                 alt="" 
             />
             </div>

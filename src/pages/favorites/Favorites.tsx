@@ -20,9 +20,8 @@ const Favorites = (props: any) => {
     }, [favoritesP])
 
 
-
     // get posts on basket 
-    const {basket, loadingB, errorB} = useTypeSelector(state => state.basket);
+    const {basket} = useTypeSelector(state => state.basket);
     const [basketP, setBasket] = useState(basket);
     const {fetchBasket} = useActions();
 
@@ -61,7 +60,6 @@ const Favorites = (props: any) => {
                     />
             </div>
         );
-
     }else{
         return (
             <div className={cl.notFound}>

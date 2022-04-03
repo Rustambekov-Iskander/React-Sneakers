@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
-import { Basket } from '../../types/basket';
-import { Favorite } from '../../types/favorite';
 import { Post } from '../../types/post';
 import PostCard from '../PostCard/PostCard';
+import addAndDeletePost from '../utils/addAndDeletePost';
 import cl from './PostList.module.scss';
 
 interface ListProps {
@@ -21,36 +20,8 @@ const PostList:FC<ListProps> = ({
     setBasket
 }) => {
 
-    const addFavorites = (post: Post) => {
-        let forFav = false;
-
-        favorites.map((favorite: Favorite) => {
-            if(favorite.post.id === post.id){
-                setFavorites(favorites.filter(favoritE => favoritE.post !== post))
-                forFav = true;
-            }
-        })
-
-        if (!forFav){
-        setFavorites([...favorites, {post}]);
-        }
-    }
-
-    const addInBasket = (post: Post) => {
-        let forBasket = false;
-
-        basket.map((Basket: Basket) => {
-            if(Basket.post.id === post.id){
-                setBasket(basket.filter(Basket => Basket.post !== post))
-                forBasket = true
-            }
-        })
-
-        if (!forBasket){
-            setBasket([...basket, {post}]);
-        }
-
-    }
+    const addFavorites = addAndDeletePost(favorites, setFavorites);
+    const addInBasket = addAndDeletePost(basket, setBasket);
 
     return (
         <div className={cl.postList}>

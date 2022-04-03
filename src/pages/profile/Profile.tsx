@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import PostList from '../../components/post-list/PostList';
 import Button from '../../components/UI/button/Button';
 import ButtonBack from '../../components/UI/button/ButtonBack';
 import Loading from '../../components/UI/loading/Loading';
@@ -20,7 +19,6 @@ const Profile = () => {
     useEffect(() => {
         fetchFavorites(favoritesP);
     }, [favoritesP])
-
 
 
     // get posts on basket 

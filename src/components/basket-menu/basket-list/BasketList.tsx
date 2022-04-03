@@ -22,9 +22,11 @@ const BasketList: FC<BasketListProps> = ({
 }) => {
 
     let totalPrice = 0;
+    
     basket.map(Basket => {
         totalPrice += Basket.post.userId * 30;
     })
+
     const tax = totalPrice / 100 * 5;
 
 
