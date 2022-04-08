@@ -4,7 +4,6 @@ export interface Basket{
     post: Post;
 }
 
-
 export interface BasketState{
     basket: Basket[];
     loadingB: boolean;

@@ -6,7 +6,7 @@ import { Basket } from '../../../types/basket';
 
 interface BasketCardProps {
     post: Basket;
-    onClick: any;
+    onClick: () => void;
 }
 
 const BasketCard: FC<BasketCardProps> = ({post, onClick}) => {

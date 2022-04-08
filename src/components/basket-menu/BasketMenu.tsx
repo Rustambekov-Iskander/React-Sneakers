@@ -7,7 +7,7 @@ import Loading from '../UI/loading/Loading';
 
 interface BasketProps{
     active: boolean;
-    setActive: any;
+    setActive: (prevState: boolean) => boolean | void;
 }
 
 const BasketMenu: FC<BasketProps> = ({active, setActive}) => {

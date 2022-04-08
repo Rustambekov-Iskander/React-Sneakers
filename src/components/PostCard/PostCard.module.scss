@@ -1,6 +1,6 @@
 .card{
     border: 1px solid #F3F3F3;
-    background-color: #DCDCDC;
+    background-color: white;
     width: 160px;
     height: 260px;
     border-radius: 40px;
@@ -15,7 +15,6 @@
     &.inBasket{
         box-shadow: 0 0 10px;
     }
-    
 
     &__imgs{
         display: flex;
@@ -39,6 +38,7 @@
     &__img{
         width: 133px;
         height: 112px;
+        object-fit: cover;
     }
 
     &__title{

@@ -3,13 +3,15 @@ import { Post } from '../../types/post';
 import PostCard from '../PostCard/PostCard';
 import addAndDeletePost from '../utils/addAndDeletePost';
 import cl from './PostList.module.scss';
+import {Favorite} from "../../types/favorite";
+import {Basket} from "../../types/basket";
 
 interface ListProps {
-    posts: any[];
-    favorites: any[];
-    setFavorites: any;
-    basket: any[];
-    setBasket: any;
+    posts: Post[];
+    favorites: Favorite[];
+    setFavorites:  React.Dispatch<React.SetStateAction<Favorite[]>>;
+    basket: Basket[];
+    setBasket: React.Dispatch<React.SetStateAction<Basket[]>>;
 }
 
 const PostList:FC<ListProps> = ({
@@ -20,6 +22,7 @@ const PostList:FC<ListProps> = ({
     setBasket
 }) => {
 
+    // add or delete favorites/inBasket posts
     const addFavorites = addAndDeletePost(favorites, setFavorites);
     const addInBasket = addAndDeletePost(basket, setBasket);
 

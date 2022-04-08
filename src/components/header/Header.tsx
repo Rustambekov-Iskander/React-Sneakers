@@ -10,7 +10,7 @@ import { Basket } from '../../types/basket';
 import BasketMenu from '../basket-menu/BasketMenu';
 
 interface HeaderProps{
-    basketClick: any;
+    basketClick: () => void;
 }
 
 const Header: FC<HeaderProps> = ({basketClick}) => {

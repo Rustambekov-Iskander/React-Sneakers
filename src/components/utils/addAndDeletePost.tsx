@@ -3,7 +3,7 @@ import { Post } from '../../types/post';
 import { Favorite } from '../../types/favorite';
 
 
-const addAndDeletePost = (posts: any[], setPosts: any ) => {
+const addAndDeletePost = (posts: Favorite[], setPosts: React.Dispatch<React.SetStateAction<Favorite[]>> ) => {
     return (post: Post) => {
         let forPost = false;
         posts.map((Post: Favorite) => {

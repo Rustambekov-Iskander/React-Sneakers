@@ -13,10 +13,10 @@ interface Card{
     post: Post;
     img?: string;
     heart?: boolean;
-    heartOnClick?: any;
-    favorites?: any[];
-    plusClick?: any;
-    basket?: any[];
+    heartOnClick?: () => void;
+    favorites?: Favorite[];
+    plusClick?: () => void;
+    basket?: Basket[];
 }
 
 const PostCard: FC<Card> = ({

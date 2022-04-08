@@ -7,11 +7,11 @@ import { Basket } from '../../types/basket';
 import addAndDeletePost from '../utils/addAndDeletePost';
 
 interface ListProps{
-    posts: any[];
-    favorites: any[];
-    setFavorites: any;
-    basket: any[];
-    setBasket: any;
+    posts: Favorite[];
+    favorites: Favorite[];
+    setFavorites:  React.Dispatch<React.SetStateAction<Favorite[]>>;
+    basket: Basket[];
+    setBasket: React.Dispatch<React.SetStateAction<Basket[]>>;
 }
 
 const FavoriteList: FC<ListProps> = ({
@@ -22,6 +22,7 @@ const FavoriteList: FC<ListProps> = ({
     setBasket
 }) => {
 
+    // add or delete favorites/inBasket posts
     const removeFavorite = addAndDeletePost(favorites, setFavorites);
     const addInBasket = addAndDeletePost(basket, setBasket);
 

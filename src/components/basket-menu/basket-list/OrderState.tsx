@@ -3,10 +3,11 @@ import Button from '../../UI/button/Button';
 import cl from './BasketList.module.scss';
 import box from '../../img/box.jpg';
 import finish from '../../img/order-done.png';
+import {Profile} from "../../../types/profile";
 
 interface State{
-    setActive: any;
-    profile: any[];
+    setActive: (prevState: boolean) => boolean | void;
+    profile: Profile[];
 }
 
 const OrderState: FC<State> = ({setActive, profile}) => {

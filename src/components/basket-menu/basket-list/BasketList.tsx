@@ -4,13 +4,14 @@ import BasketCard from '../basket-card/BasketCard';
 import cl from './BasketList.module.scss';
 import { Basket } from '../../../types/basket';
 import OrderState from './OrderState';
+import {Profile} from "../../../types/profile";
 
 interface BasketListProps{
-    basket: any[];
-    profile: any[];
-    setBasket: any;
-    setActive: any;
-    setProfile: any;
+    basket: Basket[];
+    profile: Profile[];
+    setBasket: React.Dispatch<React.SetStateAction<Basket[]>>;
+    setActive: (prevState: boolean) => boolean | void;
+    setProfile: React.Dispatch<React.SetStateAction<Profile[]>>;
 }
 
 const BasketList: FC<BasketListProps> = ({
