@@ -1,12 +1,10 @@
-import React from 'react';
-import cl from './Button.module.scss';
+import React from "react";
+import cl from "./Button.module.scss";
 
 const ButtonBack = () => {
-    const back = '<';
+  const back = "<";
 
-    return (
-        <button className={cl.backButton}>{back}</button>
-    );
+  return <button className={cl.backButton}>{back}</button>;
 };
 
 export default ButtonBack;

@@ -1,29 +1,29 @@
-.button{
-    background-color: #A5D364;
-    border: none;
-    border-radius: 12px;
-    color: #FFFFFF;
-    padding: 10px 40px;
-    transition: 0.3s;
-    cursor: pointer;
+.button {
+  background-color: #a5d364;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  padding: 10px 40px;
+  transition: 0.3s;
+  cursor: pointer;
 
-    &:hover{
-        background-color: #87b447;
-        transition: 0.3s;
-    }
+  &:hover {
+    background-color: #87b447;
+    transition: 0.3s;
+  }
 }
 
 .backButton {
-    border: 1px solid #F2F2F2;
-    background-color: #ffff;
-    padding: 12px 14px;
-    border-radius: 8px;
-    color: #C8C8C8;
-    transition: 0.2s;
-    cursor: pointer;
+  border: 1px solid #f2f2f2;
+  background-color: #ffff;
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: #c8c8c8;
+  transition: 0.2s;
+  cursor: pointer;
 
-    &:hover{
-        background-color: rgb(243, 240, 240);
-        transition: 0.2s;
-    }
+  &:hover {
+    background-color: rgb(243, 240, 240);
+    transition: 0.2s;
+  }
 }

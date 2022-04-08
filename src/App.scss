@@ -1,20 +1,21 @@
-html, body{
+html,
+body {
   background-color: #ffff;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   width: auto;
-  background: url('./components/img/backgrounds/background.jpg');
-  
+  background: url("./components/img/backgrounds/background.jpg");
+
   // overflow-x: hidden;
 }
 
-.wrapper{
+.wrapper {
   width: 1080px;
   min-width: 400px;
   background-color: white;
 
   @media (min-width: 1080px) {
-    &{
+    & {
       margin: 80px 0px;
       border-radius: 20px;
       // min-height: 1000px;
@@ -28,18 +29,21 @@ a {
 
 .App {
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
 }
 
-.green-text{
-  color: #8BB43C;
+.green-text {
+  color: #8bb43c;
 }
 
-
-.content{
-  padding: 0px 10px;
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-  
+.content {
+  padding: 0 10px;
+}

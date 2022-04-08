@@ -5,10 +5,10 @@ import { PostReducer } from "./postReducer";
 import { profileReducer } from "./profileReducer";
 
 export const rootReducer = combineReducers({
-    post: PostReducer,
-    favorite: favoriteReducer,
-    basket: basketReducer,
-    profile: profileReducer,
+  post: PostReducer,
+  favorite: favoriteReducer,
+  basket: basketReducer,
+  profile: profileReducer,
 });
 
-export type RootState = ReturnType<typeof rootReducer>
+export type RootState = ReturnType<typeof rootReducer>;

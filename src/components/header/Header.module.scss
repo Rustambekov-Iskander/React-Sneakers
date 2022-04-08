@@ -1,74 +1,73 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px;
+  border-bottom: #eaeaea solid 1px;
+  background: white;
+  border-radius: 8px;
+
+  &__logo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 30px 30px;
-    border-bottom: #EAEAEA solid 1px;
-    width: 100;
+  }
 
+  &__title {
+    margin-left: 16px;
+    text-align: left;
+  }
 
-    &__logo{
-        display: flex;
-        align-items: center;
+  &__logoIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  &__descr {
+    font-size: 14px;
+    color: #9d9d9d;
+    font-weight: 400;
+    line-height: 17px;
+  }
+
+  @media (max-width: 500px) {
+    &__name {
+      font-size: 17px;
     }
 
-    &__title{
-        margin-left: 16px;
-        text-align: left;
+    &__descr {
+      font-size: 15px;
     }
+  }
 
-    &__logoIcon{
-        width: 40px;
-        height: 40px;
-    }
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
 
-    &__name{
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-        color: #000000;
-    }
+  &__basket {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+  }
 
-    &__descr{
-        font-size: 14px;
-        color: #9D9D9D;
-        font-weight: 400;
-        line-height: 17px;
-    }
+  &__num {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #5c5c5c;
+    margin-left: 10px;
+  }
 
-    @media (max-width: 500px) {
-        &__name{
-            font-size: 17px;
-        }
-
-        &__descr{
-            font-size: 15px;
-        }
-    }
-
-    &__menu{
-        display: flex;
-        align-items: center;
-    }
-
-    &__basket{
-        display: flex;
-        align-items: center;
-        margin-right: 30px;
-    }
-
-    &__num{
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 17px;
-        color: #5C5C5C;
-        margin-left: 10px;
-    }
-
-    &__heart{
-        display: flex;
-        align-items: center;
-        margin-right: 30px;
-    }
-    
+  &__heart {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+  }
 }

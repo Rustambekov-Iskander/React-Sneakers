@@ -1,84 +1,83 @@
-.card{
-    border: 1px solid #F3F3F3;
-    background-color: white;
-    width: 160px;
-    height: 260px;
-    border-radius: 40px;
-    padding: 20px 30px;
-    text-align: left;
+.card {
+  border: 1px solid #f3f3f3;
+  background-color: white;
+  width: 160px;
+  height: 260px;
+  border-radius: 40px;
+  padding: 20px 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 20px;
+
+  &.inBasket {
+    box-shadow: 0 0 10px;
+  }
+
+  &__imgs {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0px;
+  }
+
+  &__heart {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    transition: 1s;
+    transform: scaleX(1);
+    cursor: pointer;
+
+    &.heart__color {
+      transform: scaleX(-1);
+    }
+  }
+
+  &__img {
+    width: 133px;
+    height: 112px;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+
+  &__div {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin: 20px 20px;
+    width: 150px;
+  }
 
-    &.inBasket{
-        box-shadow: 0 0 10px;
+  &__price {
+    .price__cost {
+      color: #bdbdbd;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 13px;
     }
 
-    &__imgs{
-        display: flex;
-        align-items: flex-start;
-        padding: 0px;
+    .price__value {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 17px;
+      color: #000000;
     }
+  }
 
-    &__heart{
-        position: absolute;
-        width: 33px;
-        height: 33px;
-        transition: 1s;
-        transform: scaleX(1);
-        cursor: pointer;
+  &__plus {
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: 0.5s;
 
-        &.heart__color{
-            transform: scaleX(-1);
-        }
+    &.plus__color {
+      transition: 0.5s;
+      transform: rotate(360deg);
     }
-
-    &__img{
-        width: 133px;
-        height: 112px;
-        object-fit: cover;
-    }
-
-    &__title{
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 17px;
-    }
-
-    &__div{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 150px;
-    }
-
-    &__price{
-
-        .price__cost{
-            color: #BDBDBD;
-            font-size: 11px;
-            font-weight: 500;
-            line-height: 13px;
-        }
-
-        .price__value{
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 17px;
-            color: #000000;
-        }
-    }
-
-    &__plus{
-        cursor: pointer;
-        transform: rotate(0deg);
-        transition: 0.5s;
-
-        &.plus__color{
-            transition: 0.5s;
-            transform: rotate(360deg);
-        }
-    }
+  }
 }
