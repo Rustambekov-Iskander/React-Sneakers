@@ -22,9 +22,11 @@ const BasketList: FC<BasketListProps> = ({
 
   const tax = (totalPrice / 100) * 5;
   const removePost = addAndDeletePost(basket, setBasket);
+  console.log(basket);
+  console.log(profile);
 
   const finishOrder = () => {
-    setProfile([...profile, basket]);
+    setProfile(basket);
     setBasket([]);
   };
 
